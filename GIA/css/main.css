@@ -1,0 +1,33 @@
+.content, .content-full{
+    padding: 10px
+    
+}
+
+.content-full{
+    padding: 10px;
+    margin: 10px;
+}
+
+.bg-lightgrey{
+    background-color: lightslategray;
+}
+
+.bg-white{
+    border-radius: 5px;
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+.container {
+    position: relative;
+  }
+  
+  .child {
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
