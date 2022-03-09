@@ -9,9 +9,9 @@
         <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body class="bg-lightgrey">
-        <div class="containe bg-white col-xxl-4">
-            <div class="child bg-white">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <div class="col-xxl-4">
+            <div class="padding-60 child bg-white">
+                <ul class="nav nav-tabs push" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="home-tab"
                             data-bs-toggle="tab" data-bs-target="#home"
@@ -26,13 +26,17 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade show active" id="home"
+                        role="tabpanel" aria-labelledby="home-tab">
                         <form>
-                            <input type="text">
-                            <input type="password">
+                            <input id="user" type="text" class="form-control rounded-30" placeholder="Usuario" name="user" onchange="lsRememberMe()"><br>
+                            <input id="password" type="password" class="form-control rounded-30"><br>
+                            <input id="checkRemember" class="form-check-input" placeholder="Contraseña" type="checkbox" value="checked" onclick="lsRememberMe()"><br>
+                            <label for="checkRemember">Recordar</label>
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                        aria-labelledby="profile-tab">
                         <form></form>
                     </div>
                 </div>
@@ -40,4 +44,5 @@
         </div>
     </body>
     <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
 </html>

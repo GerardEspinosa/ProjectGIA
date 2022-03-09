@@ -24,10 +24,22 @@
     position: relative;
   }
   
-  .child {
+.child {
     /* Center vertically and horizontally */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+
+.padding-60{
+    padding: 60px;
+}
+
+.push{
+    margin-bottom: 20px !important;
+}
+
+.rounded-30{
+    border-radius: 30px !important;
+}
