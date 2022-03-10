@@ -9,7 +9,7 @@
 }
 
 .bg-lightgrey{
-    background-color: lightslategray;
+    background-color: rgb(202, 202, 202);
 }
 
 .bg-white{
@@ -36,8 +36,11 @@
     padding: 60px;
 }
 
-.push{
+.push-20{
     margin-bottom: 20px !important;
+}
+.push-40{
+    margin-bottom: 40px !important;
 }
 
 .rounded-30{
