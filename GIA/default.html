@@ -8,8 +8,12 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/sweetalert2.min.css">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     </head>
     <body class="bg-lightgrey">
+        <div class="header" id="myHeader">
+            <h2>GUARD INTELLIGENCE AGENCY</h2>
+        </div>
         <div class="padding-60 child bg-white">
             <ul class="nav nav-tabs push-20" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -28,7 +32,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home"
                     role="tabpanel" aria-labelledby="home-tab">
-                    <form action="php/login.php">
+                    <form action="php/login.php" method="post">
                         <div>
                             <input id="user" type="text" class="form-control
                                 rounded-30" placeholder="Usuario"
@@ -36,7 +40,7 @@
                                 onchange="lsRememberMe()"><br>
                             <input id="password" type="password"
                                 class="form-control rounded-30"
-                                placeholder="Contraseña"><br>
+                                placeholder="Contraseña" name="password"><br>
 
                         </div>
                         <div class="container push-40">
@@ -48,30 +52,27 @@
                                     onclick="lsRememberMe()">Recordar</label>
                         </div>
                         <div class="container">
-                            <button type="submit" class="btn btn-primary
-                                child rounded-30">Iniciar Sesión</button>
+                            <a href="index.html" type="submit" class="btn btn-primary
+                                child rounded-30">Iniciar Sesión</a>
                         </div>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel"
                     aria-labelledby="profile-tab">
-                    <form>
-                        <input id="nombre" type="text" class="form-control
+                    <form action="php/registro.php" method="post">
+                        <input id="nombre" name="nombre" type="text" class="form-control
                             rounded-30" placeholder="Nombre"><br>
-                        <input id="apellido" type="text" class="form-control
+                        <input id="apellido" name="apellido" type="text" class="form-control
                             rounded-30" placeholder="Apellido"><br>
-                        <input id="correo" type="email" class="form-control
+                        <input id="correo" name="correo" type="email" class="form-control
                             rounded-30" placeholder="E-mail"><br>
-                        <input id="dni" type="text" class="form-control
+                        <input id="dni" name="" type="text" class="form-control
                             rounded-30" placeholder="DNI"><br>
-                        <input id="telefono" type="tel" class="form-control
+                        <input id="telefono" name="telefono" type="tel" class="form-control
                             rounded-30" placeholder="Teléfono"><br>
-                        <input id="fecha_nacimiento" type=""
+                        <input id="fecha_nacimiento" name="fecha_nacimiento" type=""
                             class="form-control rounded-30"
                             placeholder="Fecha de Nacimiento"><br>
-                        <input id="fecha_nacimiento" type=""
-                            class="form-control rounded-30"
-                            placeholder="Fecha de Nacimiento">
                         <div class="container">
                             <button type="submit" class="btn btn-primary
                                 child rounded-30">Registrarse</button>
@@ -84,4 +85,5 @@
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </html>
