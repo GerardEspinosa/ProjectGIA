@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GIA</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/sweetalert2.min.css">
+    </head>
+    <body class="bg-lightgrey">
+        <div class="padding-60 child bg-white">
+            <ul class="nav nav-tabs push-20" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab"
+                        data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home"
+                        aria-selected="true">Iniciar Sesión</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab"
+                        data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile"
+                        aria-selected="false">Registrarse</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home"
+                    role="tabpanel" aria-labelledby="home-tab">
+                    <form action="php/login.php">
+                        <div>
+                            <input id="user" type="text" class="form-control
+                                rounded-30" placeholder="Usuario"
+                                name="user"
+                                onchange="lsRememberMe()"><br>
+                            <input id="password" type="password"
+                                class="form-control rounded-30"
+                                placeholder="Contraseña"><br>
+
+                        </div>
+                        <div class="container push-40">
+                            <label for="checkRemember" class="child"><input
+                                    id="checkRemember"
+                                    class="form-check-input"
+                                    placeholder="Contraseña" type="checkbox"
+                                    value="checked"
+                                    onclick="lsRememberMe()">Recordar</label>
+                        </div>
+                        <div class="container">
+                            <button type="submit" class="btn btn-primary
+                                child rounded-30">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel"
+                    aria-labelledby="profile-tab">
+                    <form>
+                        <input id="nombre" type="text" class="form-control
+                            rounded-30" placeholder="Nombre"><br>
+                        <input id="apellido" type="text" class="form-control
+                            rounded-30" placeholder="Apellido"><br>
+                        <input id="correo" type="email" class="form-control
+                            rounded-30" placeholder="E-mail"><br>
+                        <input id="dni" type="text" class="form-control
+                            rounded-30" placeholder="DNI"><br>
+                        <input id="telefono" type="tel" class="form-control
+                            rounded-30" placeholder="Teléfono"><br>
+                        <input id="fecha_nacimiento" type=""
+                            class="form-control rounded-30"
+                            placeholder="Fecha de Nacimiento"><br>
+                        <input id="fecha_nacimiento" type=""
+                            class="form-control rounded-30"
+                            placeholder="Fecha de Nacimiento">
+                        <div class="container">
+                            <button type="submit" class="btn btn-primary
+                                child rounded-30">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</html>
