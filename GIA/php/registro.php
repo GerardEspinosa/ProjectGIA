@@ -32,7 +32,7 @@
         echo "Conectado con exito" . <br>;
         $query = "INSERT INTO clientes(dni_Cliente, Nombre_Cliente, Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Fecha_Nacimiento_Cliente) VALUES(?, ?, ?, ?, ?, ?)";
         if($result = mysqli_query($connection, $query)){
-            echo "Usuario registrado"
+            echo "Usuario registrado";
         }
         
     }
