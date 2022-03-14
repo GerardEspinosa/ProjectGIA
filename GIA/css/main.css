@@ -8,6 +8,12 @@
     margin: 10px;
 }
 
+#menu{
+    position:absolute;
+    left: 10px;
+    
+}
+
 .bg-lightgrey{
     background-color: lightslategray;
 }

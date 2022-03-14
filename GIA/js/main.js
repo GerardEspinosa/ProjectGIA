@@ -1,7 +1,6 @@
 rmCheck = document.getElementById("checkRemember");
 user = document.getElementById("user");
 
-
 //Al entrar a la pantalla de login comprobamos en el localStorage si hay que activar el checknox y rellenar el campo de usuario
 if (localStorage.checkbox && localStorage.checkbox !== "") {
     rmCheck.setAttribute("checked", "checked");
