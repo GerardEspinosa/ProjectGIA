@@ -8,13 +8,15 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/sweetalert2.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"></script>
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     </head>
     <body class="bg-lightgrey">
         <div class="header" id="myHeader">
             <h2>GUARD INTELLIGENCE AGENCY</h2>
         </div>
-        <div class="padding-60 child bg-white">
+        <div class="shadow padding-60 child bg-white">
             <ul class="nav nav-tabs push-20" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab"
@@ -41,7 +43,6 @@
                             <input id="password" type="password"
                                 class="form-control rounded-30"
                                 placeholder="Contraseña" name="password"><br>
-
                         </div>
                         <div class="container push-40">
                             <label for="checkRemember" class="child"><input
@@ -52,25 +53,32 @@
                                     onclick="lsRememberMe()">Recordar</label>
                         </div>
                         <div class="container">
-                            <a href="index.html" type="submit" class="btn btn-primary
-                                child rounded-30">Iniciar Sesión</a>
+                            <input type="submit" class="btn
+                                btn-primary
+                                child rounded-30"
+                                value="Iniciar Sesión">
                         </div>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel"
                     aria-labelledby="profile-tab">
                     <form action="php/registro.php" method="post">
-                        <input id="nombre" name="nombre" type="text" class="form-control
+                        <input id="nombre" name="nombre" type="text"
+                            class="form-control
                             rounded-30" placeholder="Nombre"><br>
-                        <input id="apellido" name="apellido" type="text" class="form-control
+                        <input id="apellido" name="apellido" type="text"
+                            class="form-control
                             rounded-30" placeholder="Apellido"><br>
-                        <input id="correo" name="correo" type="email" class="form-control
+                        <input id="correo" name="correo" type="email"
+                            class="form-control
                             rounded-30" placeholder="E-mail"><br>
                         <input id="dni" name="" type="text" class="form-control
                             rounded-30" placeholder="DNI"><br>
-                        <input id="telefono" name="telefono" type="tel" class="form-control
+                        <input id="telefono" name="telefono" type="tel"
+                            class="form-control
                             rounded-30" placeholder="Teléfono"><br>
-                        <input id="fecha_nacimiento" name="fecha_nacimiento" type="date"
+                        <input id="fecha_nacimiento" name="fecha_nacimiento"
+                            type="date"
                             class="form-control rounded-30"
                             placeholder="Fecha de Nacimiento"><br>
                         <div class="container">
@@ -84,6 +92,5 @@
         <script src="js/sweetalert2.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/main.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </body>
 </html>
