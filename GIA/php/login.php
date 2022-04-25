@@ -15,10 +15,8 @@
         }
         else
         {
-            echo "Conectado con exito" . "<br>";
             $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user";
             if($result = mysqli_query($connection, $query)){
-                echo "Query Correcta";
             }
         }
 ?>
