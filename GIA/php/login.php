@@ -15,8 +15,21 @@
         }
         else
         {
+            echo "Conectado con exito" . "<br>";
             $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user";
-            if($result = mysqli_query($connection, $query)){
+            if($result = mysqli_query($connection, $query))
+            {
+                header("LOCATION: ../index.html");
+            }
+            else
+            {
+                $query = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user";
+                if($result = mysqli_query($connection, $query))
+                {
+                    header("LOCATION: ../index.html");
+                }
             }
         }
+
+        mysqli_close($connection);
 ?>

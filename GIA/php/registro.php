@@ -39,7 +39,5 @@
         }
     }
 
-    //$dni, $nombre, $apellido, $telefono, $correo, $fecha_nacimiento
-
     mysqli_close($connection);
 ?>
