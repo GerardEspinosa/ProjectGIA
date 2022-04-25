@@ -1,10 +1,10 @@
 <?php
-    $host = "localhost";
-    $user = "root";
-    $password = "";
-    $db = "proyectogia";
+        $host = "localhost";
+        $user = "root";
+        $password = "";
+        $db = "proyectogia";
     
-    $connection = mysqli_connect($host, $user, $password, $db);
+        $connection = mysqli_connect($host, $user, $password, $db);
 
         $user = "'" . $_POST["user"] . "'";
         $pwd = "'" . $_POST["password"] . "'";
@@ -16,10 +16,9 @@
         else
         {
             echo "Conectado con exito" . "<br>";
-            //select * from clientes where Nombre_Cliente = 'Gerard'
-            $query = "SELECT * FROM clientes Where Nombre_Cliente = $user";
+            $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user";
             if($result = mysqli_query($connection, $query)){
-                header("LOCATION: ../index.html");
+                echo "Query Correcta";
             }
         }
 ?>
