@@ -16,7 +16,7 @@
         <div class="header" id="myHeader">
             <h2>GUARD INTELLIGENCE AGENCY</h2>
         </div>
-        <div class="shadow padding-60 child bg-white">
+        <div class="shadow col-12 col-sm-6 col-lg-4 padding-60 child bg-white">
             <ul class="nav nav-tabs push-20" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab"
@@ -37,14 +37,14 @@
                     <form action="php/login.php" method="post">
                         <div>
                             <input id="user" type="text" class="form-control
-                                rounded-30" placeholder="Usuario"
+                                rounded-30 mt-3" placeholder="Usuario"
                                 name="user"
-                                onchange="lsRememberMe()"><br>
+                                onchange="lsRememberMe()">
                             <input id="password" type="password"
-                                class="form-control rounded-30"
-                                placeholder="Contraseña" name="password"><br>
+                                class="form-control rounded-30 mt-3"
+                                placeholder="Contraseña" name="password">
                         </div>
-                        <div class="container push-40">
+                        <div class="container push-40 mt-3">
                             <label for="checkRemember" class="child"><input
                                     id="checkRemember"
                                     class="form-check-input"
@@ -52,10 +52,10 @@
                                     value="checked"
                                     onclick="lsRememberMe()">Recordar</label>
                         </div>
-                        <div class="container">
+                        <div class="container mt-5">
                             <input type="submit" class="btn
                                 btn-primary
-                                child rounded-30"
+                                child rounded-30 mt-3"
                                 value="Iniciar Sesión">
                         </div>
                     </form>
@@ -65,23 +65,19 @@
                     <form action="php/registro.php" method="post">
                         <input id="nombre" name="nombre" type="text"
                             class="form-control
-                            rounded-30" placeholder="Nombre"><br>
+                            rounded-30 mt-3" placeholder="Nombre">
                         <input id="apellido" name="apellido" type="text"
                             class="form-control
-                            rounded-30" placeholder="Apellido"><br>
+                            rounded-30 mt-3" placeholder="Apellido">
                         <input id="correo" name="correo" type="email"
                             class="form-control
-                            rounded-30" placeholder="E-mail"><br>
-                        <input id="dni" name="" type="text" class="form-control
-                            rounded-30" placeholder="DNI"><br>
+                            rounded-30 mt-3" placeholder="E-mail">
+                        <input id="dni" name="dni" type="text" class="form-control
+                            rounded-30 mt-3" placeholder="DNI">
                         <input id="telefono" name="telefono" type="tel"
                             class="form-control
-                            rounded-30" placeholder="Teléfono"><br>
-                        <input id="fecha_nacimiento" name="fecha_nacimiento"
-                            type="date"
-                            class="form-control rounded-30"
-                            placeholder="Fecha de Nacimiento"><br>
-                        <div class="container">
+                            rounded-30 mt-3" placeholder="Teléfono">
+                        <div class="container mt-5">
                             <button type="submit" class="btn btn-primary
                                 child rounded-30">Registrarse</button>
                         </div>

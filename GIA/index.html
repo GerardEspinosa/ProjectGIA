@@ -24,9 +24,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
       </div>
       <div class="offcanvas-body">
-        <p>Some text lorem ipsum.</p>
-        <p>Some text lorem ipsum.</p>
-        <p>Some text lorem ipsum.</p>
+        <p>Panel de Admin</p>
+        <p>Panel de Usuario</p>
         <a class="btn btn-secondary" type="button" href="default.html">Logout</a>
       </div>
     </div>
@@ -36,41 +35,40 @@
       data-bs-toggle="offcanvas"
       data-bs-target="#demo">
     </button>
-      <div class="child text-center" id="pagina">
-        <h1>Bienvenido, </h1><h1 id="userName"></h1>
-        <button class="btn btn-primary rounded-30" onclick="myFunction()">Ver datos personales</button>
-      </div>
-      <div class="child bg-white shadow padding-60" id="personalData">
-        <table class="table table-borderless">
-          <tr>
-            <td><b>Nombre de usuario</b></td>
-            <td>adria</td>
-          </tr>
-          <tr>
-            <td><b>Nombre</b></td>
-            <td>Adrià</td>
-          </tr>
-          <tr>
-            <td><b>Apellido</b></td>
-            <td>Rivero</td>
-          </tr>
-          <tr>
-            <td><b>Email</b></td>
-            <td>adriariverosegarra@gmail.com</td>
-          </tr>
-          <tr>
-            <td><b>Teléfono</b></td>
-            <td>75920576</td>
-          </tr>
-        </table>
+    <div class="child text-center" id="pagina">
+      <h1>Bienvenido, </h1><h1 id="userName"></h1>
+      <button class="btn btn-primary rounded-30" onclick="myFunction()">Ver
+        datos personales</button>
     </div>
-    <script>
-      if (localStorage.checkbox !== "") {
-        document.getElementById("userName").innerHTML = localStorage.username;
-    }
-    </script>
+    <div class="child bg-white shadow padding-60" id="personalData">
+      <table class="table table-borderless">
+        <tr>
+          <td><b>Nombre de usuario</b></td>
+          <td>adria</td>
+        </tr>
+        <tr>
+          <td><b>Nombre</b></td>
+          <td>Adrià</td>
+        </tr>
+        <tr>
+          <td><b>Apellido</b></td>
+          <td>Rivero</td>
+        </tr>
+        <tr>
+          <td><b>Email</b></td>
+          <td>adriariverosegarra@gmail.com</td>
+        </tr>
+        <tr>
+          <td><b>Teléfono</b></td>
+          <td>75920576</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Productos</h3>
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/main.js"></script>
   </body>
 
