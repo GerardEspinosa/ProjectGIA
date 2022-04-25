@@ -14,9 +14,10 @@
     </head>
     <body class="bg-lightgrey">
         <div class="header" id="myHeader">
-            <h2>GUARD INTELLIGENCE AGENCY</h2>
+            <h1></h1>
+            <img src="./img/gia-logo.png">
         </div>
-        <div class="shadow padding-60 child bg-white">
+        <div class="shadow padding-60 child bg-white"  style="margin-top: 100px;">
             <ul class="nav nav-tabs push-20" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab"
@@ -33,7 +34,7 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home"
-                    role="tabpanel" aria-labelledby="home-tab">
+                    role="tabpanel" aria-labelledby="home-tab" >
                     <form action="php/login.php" method="post">
                         <div>
                             <input id="user" type="text" class="form-control
@@ -50,7 +51,7 @@
                                     class="form-check-input"
                                     placeholder="Contraseña" type="checkbox"
                                     value="checked"
-                                    onclick="lsRememberMe()">Recordar</label>
+                                    onclick="lsRememberMe()">&nbsp Recordar</label>
                         </div>
                         <div class="container">
                             <input type="submit" class="btn
@@ -82,6 +83,7 @@
                             class="form-control rounded-30"
                             placeholder="Fecha de Nacimiento"><br>
                         <div class="container">
+                            <br>
                             <button type="submit" class="btn btn-primary
                                 child rounded-30">Registrarse</button>
                         </div>
