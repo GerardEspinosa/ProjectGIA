@@ -18,6 +18,8 @@
     $correo = "'" . $_POST["correo"] . "'";
     $dni = "'" . $_POST["dni"] . "'";
     $telefono = "'" . $_POST["telefono"] . "'";
+    $userName = "'" . $_POST["nombre_usuario"] . "'";
+    $pwd = "'" . $_POST["contraseña_cliente"] . "'";
     //$fecha_nacimiento = $_POST["fecha_nacimiento"];
 
     //////////////////////////////////////////////////////////////////////
@@ -31,15 +33,13 @@
     {
         echo "Conectado con exito" . "<br>";
         //$query = "INSERT INTO clientes(dni_Cliente, Nombre_Cliente, Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Fecha_Nacimiento_Cliente) VALUES(?, ?, ?, ?, ?, ?)";
-        $query = "INSERT INTO `clientes` ( `dni_Cliente`, `Nombre_Cliente`, `Apellido_Cliente`, `Telefono_Cliente`, `Correo_Cliente`) VALUES ( $dni, $nombre, $apellido, $telefono, $correo)";
+        $query = "INSERT INTO `clientes` ( `dni_Cliente`, `Nombre_Cliente`, `Apellido_Cliente`, `Telefono_Cliente`, `Correo_Cliente`, `Nombre_Usuario`, `Contraseña_Cliente`) VALUES ( $dni, $nombre, $apellido, $telefono, $correo, $userName, $pwd)";
         //echo ($query);
         if($result = mysqli_query($connection, $query))
         {
             header("LOCATION: ../index.html");
         }
     }
-
-    //$dni, $nombre, $apellido, $telefono, $correo, $fecha_nacimiento
 
     mysqli_close($connection);
 ?>
