@@ -35,13 +35,11 @@
         //echo ($query);
         if($result = mysqli_query($connection, $query))
         {
-            echo "Usuario registrado";
+            header("LOCATION: ../index.html");
         }
     }
 
     //$dni, $nombre, $apellido, $telefono, $correo, $fecha_nacimiento
-
-    echo $nombre;
 
     mysqli_close($connection);
 ?>
