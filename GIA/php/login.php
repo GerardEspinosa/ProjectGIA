@@ -16,14 +16,14 @@
         else
         {
             echo "Conectado con exito" . "<br>";
-            $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user";
+            $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user AND Contraseña_Cliente = $pwd";
             if($result = mysqli_query($connection, $query))
             {
                 header("LOCATION: ../index.html");
             }
             else
             {
-                $query = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user";
+                $query = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user AND Contraseña_Cliente = $pwd";
                 if($result = mysqli_query($connection, $query))
                 {
                     header("LOCATION: ../index.html");
