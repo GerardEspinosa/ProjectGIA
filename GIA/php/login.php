@@ -6,7 +6,7 @@
     
         $connection = mysqli_connect($host, $user, $password, $db);
 
-        $user = "'" . $_POST["user"] . "'";
+        $username = "'" . $_POST["user"] . "'";
         $pwd = "'" . $_POST["password"] . "'";
 
         if(!$connection)
@@ -16,14 +16,14 @@
         else
         {
             echo "Conectado con exito" . "<br>";
-            $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user AND Contraseña_Cliente = $pwd";
+            $query = "SELECT * FROM `clientes` WHERE Nombre_Usuario = $username AND Contraseña_Cliente = $pwd";
             if($result = mysqli_query($connection, $query))
             {
                 header("LOCATION: ../index.html");
             }
             else
             {
-                $query = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user AND Contraseña_Cliente = $pwd";
+                $query = "SELECT * FROM `clientes` WHERE Correo_Cliente = $username AND Contraseña_Cliente = $pwd";
                 if($result = mysqli_query($connection, $query))
                 {
                     header("LOCATION: ../index.html");
