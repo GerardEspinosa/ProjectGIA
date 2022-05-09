@@ -1,4 +1,5 @@
 <?php
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -19,7 +20,7 @@
      }
 
     $clientes='CREATE TABLE clientes (
-              id_Cliente int(11) NOT NULL,
+              id_Cliente int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
               dni_Cliente varchar(9) NOT NULL,
               Nombre_Cliente varchar(20)  NOT NULL,
               Apellido_Cliente varchar(30) NOT NULL,
@@ -43,7 +44,7 @@
      }
     
      $empleados='CREATE TABLE empleado (
-      id_Empleado int(11) NOT NULL,
+      id_Empleado int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
       dni_Empleado varchar(9) NOT NULL,
       Nombre_Empleado varchar(20)  NOT NULL,
       Apellidos_Empleado varchar(30)  NOT NULL,
@@ -62,7 +63,7 @@
    }
 
   $tarifas='CREATE TABLE tarifas (
-    id_Tarifa int(11) NOT NULL,
+    id_Tarifa int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre_Tarifa varchar(15) COLLATE latin1_spanish_ci NOT NULL,
     Descripcion_Tarifa varchar(50) COLLATE latin1_spanish_ci NOT NULL,
     Precio_Tarifa decimal(10,0) NOT NULL
@@ -76,9 +77,11 @@
     }
 
   $tarifas_clientes='CREATE TABLE tarifas_clientes (
-    id_Tarifas_Clientes int(11) NOT NULL,
+    id_Tarifas_Clientes int(11) NOT NULL PRIMARY KEY,
     id_Tarifa int(11) NOT NULL,
-    id_Cliente int(11) NOT NULL
+    id_Cliente int(11) NOT NULL,
+    FOREIGN KEY (id_Tarifa) REFERENCES tarifas(id_Tarifa),
+    FOREIGN KEY (id_Cliente) REFERENCES clientes(id_Cliente)
     ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COLLATE=utf8mb4_spanish_ci;';
 
   if (mysqli_query($conn, $tarifas_clientes)) {
@@ -87,50 +90,6 @@
   echo "Error creating table: " . mysqli_error($conn)."<br>";
  }
 
- $alter_clientes='ALTER TABLE `clientes`
- ADD PRIMARY KEY (`id_Cliente`),
- MODIFY id_Cliente int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1231537;';
-
-  if (mysqli_query($conn, $alter_clientes)) {
-    echo "Alter clientes correcto<br>";
-    } else {
-    echo "Error alter clientes: " . mysqli_error($conn)."<br>";
-  }
-
-  $alter_empleado='ALTER TABLE `empleado`
-  ADD PRIMARY KEY (`id_Empleado`),
-  MODIFY `id_Empleado` int(11) NOT NULL AUTO_INCREMENT;';
-
-  if (mysqli_query($conn, $alter_empleado)) {
-    echo "Alter empleado correcto<br>";
-    } else {
-    echo "Error alter empleado: " . mysqli_error($conn)."<br>";
-  }
-
-  $alter_tarifas='ALTER TABLE `tarifas`
-  ADD PRIMARY KEY (`id_Tarifa`),
-  MODIFY `id_Tarifa` int(11) NOT NULL AUTO_INCREMENT;';
-
-if (mysqli_query($conn, $alter_tarifas)) {
-  echo "Alter tarifas correcto<br>";
-  } else {
-  echo "Error alter tarifas: " . mysqli_error($conn)."<br>";
-}
-
-
-  $alter_tarifas_clientes='ALTER TABLE `tarifas_clientes`
-  ADD PRIMARY KEY (`id_Tarifas_Clientes`),
-  ADD KEY `id_Cliente` (`id_Cliente`),
-  ADD KEY `id_Tarifa` (`id_Tarifa`),
-  ADD CONSTRAINT `id_Cliente` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`),
-  ADD CONSTRAINT `id_Tarifa` FOREIGN KEY (`id_Tarifa`) REFERENCES `tarifas` (`id_Tarifa`);';
-
-if (mysqli_query($conn, $alter_tarifas_clientes)) {
-  echo "Alter tarifas_clientes correcto<br>";
-  } else {
-  echo "Error alter tarifas_clientes: " . mysqli_error($conn)."<br>";
-};
- 
 $insert_clientes='INSERT INTO clientes (id_Cliente, dni_Cliente, Nombre_Cliente,
  Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Nombre_Usuario_Cliente, Contraseña_Cliente) VALUES
 ("1", "123456", "Gerard", "Espinosa", "431425", "gerard@gmail.com", "", "12345"),
