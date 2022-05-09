@@ -18,17 +18,31 @@
             echo "Conectado con exito" . "<br>";
             $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user AND Contraseña_Cliente = $pwd";
             $query2 = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user AND Contraseña_Cliente = $pwd";
-            if($result = mysqli_query($connection, $query) || $result = mysqli_query($connection, $query2))
+            if($result = mysql_query($connection, $query) || $result = mysql_query($connection, $query2))
             {
-                header("LOCATION: ../index.html");
+                if ($result != null)
+                {
+                    header("LOCATION: ../index.html");
+                }
+                else
+                {
+                    echo "Usuario no encontrado";
+                }
             }
             else
             {
                 $query = "SELECT * FROM `empleado` WHERE Correo_Empleado = $user AND Constraseña_Empleado = $pwd";
                 $query2 = "SELECT * FROM `empleado` WHERE Usuario_Empleado = $user AND Constraseña_Empleado = $pwd";
-                if($result = mysqli_query($connection, $query) || $result = mysqli_query($connection, $query2))
+                if($result = mysql_query($connection, $query) || $result = mysql_query($connection, $query2))
                 {
-                    header("LOCATION: ../index.html");
+                    if ($result != null)
+                    {
+                        header("LOCATION: ../index.html");
+                    }
+                    else
+                    {
+                        echo "Usuario no encontrado";
+                    }
                 }
             }
 
