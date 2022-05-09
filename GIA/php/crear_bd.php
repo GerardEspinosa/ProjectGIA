@@ -13,11 +13,11 @@ if ($conn->connect_error) {
 }
 
 // Create database
-$sql = "CREATE DATABASE proyectogia_db";
+$sql = "CREATE DATABASE IF NOT EXISTS proyectogia_db";
 if ($conn->query($sql) === TRUE) {
-  echo "Database created successfully";
+  echo "Database created successfully<br>";
 } else {
-  echo "Error creating database: " . $conn->error;
+  echo "Error creating database: " . $conn->error."<br>"; 
 }
 
 $conn = mysqli_connect($servername, $username, $password,$database);
@@ -61,6 +61,7 @@ $conn = mysqli_connect($servername, $username, $password,$database);
       Cargo_Empleado enum("Admin","SuperAdmin","Jefe")  NOT NULL,
       Sueldo_Empleado decimal(10,0) NOT NULL,
       Fecha_Nacimiento_Empleado date NOT NULL,
+      Correo_Empleado varchar(30) NOT NULL,
       Usuario_Empleado varchar(15)  NOT NULL,
       Constraseña_Empleado varchar(30)  NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COLLATE=utf8mb4_spanish_ci;';
