@@ -2,7 +2,7 @@
         $host = "localhost";
         $user = "root";
         $password = "";
-        $db = "proyectogia";
+        $db = "proyectogia_db";
     
         $connection = mysqli_connect($host, $user, $password, $db);
 
@@ -18,7 +18,7 @@
 
             
             echo "Conectado con exito" . "<br>";
-            $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user AND Contraseña_Cliente = $pwd";
+            $query = "SELECT * FROM `clientes` WHERE Nombre_Usuario_Cliente = $user AND Contraseña_Cliente = $pwd";
             $query2 = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user AND Contraseña_Cliente = $pwd";
             $result = mysqli_query($connection, $query);
             $result2 = mysqli_query($connection, $query2);

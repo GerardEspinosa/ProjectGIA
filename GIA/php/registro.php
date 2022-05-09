@@ -5,7 +5,7 @@
     $host = "localhost";
     $user = "root";
     $password = "";
-    $db = "proyectogia";
+    $db = "proyectogia_db";
 
     $connection = mysqli_connect($host, $user, $password, $db);
 
@@ -33,7 +33,7 @@
     {
         echo "Conectado con exito" . "<br>";
         //$query = "INSERT INTO clientes(dni_Cliente, Nombre_Cliente, Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Fecha_Nacimiento_Cliente) VALUES(?, ?, ?, ?, ?, ?)";
-        $query = "INSERT INTO `clientes` ( `dni_Cliente`, `Nombre_Cliente`, `Apellido_Cliente`, `Telefono_Cliente`, `Correo_Cliente`, `Nombre_Usuario`, `Contraseña_Cliente`) VALUES ( $dni, $nombre, $apellido, $telefono, $correo, $userName, $pwd)";
+        $query = "INSERT INTO `clientes` ( `dni_Cliente`, `Nombre_Cliente`, `Apellido_Cliente`, `Telefono_Cliente`, `Correo_Cliente`, `Nombre_Usuario_Cliente`, `Contraseña_Cliente`) VALUES ( $dni, $nombre, $apellido, $telefono, $correo, $userName, $pwd)";
         //echo ($query);
         if($result = mysqli_query($connection, $query))
         {
