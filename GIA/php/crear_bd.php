@@ -4,13 +4,23 @@
     $username = "root";
     $password = "";
     $database="proyectogia_db";
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password,$database);
-    // Check connection
-    if (!$conn) {
-     die("Connection failed: " . mysqli_connect_error()."<br>");
-    };
+    
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
+// Create database
+$sql = "CREATE DATABASE proyectogia_db";
+if ($conn->query($sql) === TRUE) {
+  echo "Database created successfully";
+} else {
+  echo "Error creating database: " . $conn->error;
+}
+
+$conn = mysqli_connect($servername, $username, $password,$database);
 
     $drops='DROP TABLE IF EXISTS clientes,empleado,tarifas,tarifas_clientes;';
     if (mysqli_query($conn, $drops)) {
