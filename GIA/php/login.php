@@ -15,34 +15,30 @@
         }
         else
         {
+
+            
             echo "Conectado con exito" . "<br>";
             $query = "SELECT * FROM `clientes` WHERE Nombre_Cliente = $user AND Contraseña_Cliente = $pwd";
             $query2 = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user AND Contraseña_Cliente = $pwd";
-            if($result = mysql_query($connection, $query) || $result = mysql_query($connection, $query2))
+            $result = mysqli_query($connection, $query);
+            $result2 = mysqli_query($connection, $query2);
+            if(mysqli_num_rows($result)==1 || mysqli_num_rows($result2)==1)
             {
-                if ($result != null)
-                {
-                    header("LOCATION: ../index.html");
-                }
-                else
-                {
-                    echo "Usuario no encontrado";
-                }
+                header("LOCATION: ../index.html");
             }
             else
             {
                 $query = "SELECT * FROM `empleado` WHERE Correo_Empleado = $user AND Constraseña_Empleado = $pwd";
                 $query2 = "SELECT * FROM `empleado` WHERE Usuario_Empleado = $user AND Constraseña_Empleado = $pwd";
-                if($result = mysql_query($connection, $query) || $result = mysql_query($connection, $query2))
+                $result = mysqli_query($connection, $query);
+                $result2 = mysqli_query($connection, $query2);
+                if(mysqli_num_rows($result)==1 || mysqli_num_rows($result2)==1)
                 {
-                    if ($result != null)
-                    {
-                        header("LOCATION: ../index.html");
-                    }
-                    else
-                    {
-                        echo "Usuario no encontrado";
-                    }
+                    header("LOCATION: ../index.html");
+                }
+                
+                else{
+                    echo "Usuario no encontrado";
                 }
             }
 

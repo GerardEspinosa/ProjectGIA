@@ -153,7 +153,8 @@ if (mysqli_query($conn, $insert_clientes)) {
 
 $insert_tarifas='INSERT INTO tarifas (id_Tarifa, Nombre_Tarifa, Descripcion_Tarifa,
  Precio_Tarifa) VALUES
-("1", "Tarifa Base", "Tarifa base con los servicios mínimos", "150€");';
+("1", "Tarifa Base", "Tarifa base con los servicios mínimos", "150€"),
+("2", "Instalación solar", "Estudio de posibilidades de instalación y pusta en marcha", "2000€")';
 
 if (mysqli_query($conn, $insert_tarifas)) {
   echo "Insert tarifas correcto<br>";
