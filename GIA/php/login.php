@@ -34,9 +34,21 @@
                 $result2 = mysqli_query($connection, $query2);
                 if(mysqli_num_rows($result)==1 || mysqli_num_rows($result2)==1)
                 {
-                    header("LOCATION: ../index.html");
+                    $row = mysqli_fetch_assoc($result);
+                    $row = mysqli_fetch_assoc($result2);
+                    if ($row["Cambiar_Contraseña"] == TRUE || $row2["CambiarContraseña"] == TRUE){
+                        $id = $row["id_Empleado"];
+                        $empleadoUsuario = "'" . $row["Usuario_Empleado"] . "'";
+                        $queryCambiarContraseña = "UPDATE `empleado` SET `Cambiar_Contraseña`= false WHERE `id_Empleado` = 1 AND `Usuario_Empleado` = $empleadoUsuario";
+                        $cambiarContraseñaFalse = mysqli_query($connection, $queryCambiarContraseña);
+                        if (mysqli_num_rows($cambiarContraseñaFalse)==1){
+                            echo "Contraseña Cambiada";
+                        }
+                    }
+                    else{
+                        header("LOCATION: ../index.html");
+                    }
                 }
-                
                 else{
                     echo "Usuario no encontrado";
                 }
