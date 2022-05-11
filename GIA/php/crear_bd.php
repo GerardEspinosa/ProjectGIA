@@ -13,6 +13,13 @@ if ($conn->connect_error) {
 }
 
 // Create database
+
+$sql = "DROP DATABASE IF EXISTS proyectogia_db";
+if ($conn->query($sql) === TRUE) {
+  echo "Database dropped successfully<br>";
+} else {
+  echo "Error dropping database: " . $conn->error."<br>"; 
+}
 $sql = "CREATE DATABASE IF NOT EXISTS proyectogia_db";
 if ($conn->query($sql) === TRUE) {
   echo "Database created successfully<br>";
@@ -75,8 +82,8 @@ $conn = mysqli_connect($servername, $username, $password,$database);
 
   $tarifas='CREATE TABLE tarifas (
     id_Tarifa int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre_Tarifa varchar(15) COLLATE latin1_spanish_ci NOT NULL,
-    Descripcion_Tarifa varchar(50) COLLATE latin1_spanish_ci NOT NULL,
+    Nombre_Tarifa varchar(50) COLLATE latin1_spanish_ci NOT NULL,
+    Descripcion_Tarifa varchar(200) COLLATE latin1_spanish_ci NOT NULL,
     Precio_Tarifa decimal(10,0) NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COLLATE=utf8mb4_spanish_ci;';
     
@@ -110,7 +117,8 @@ $insert_clientes='INSERT INTO clientes (id_Cliente, dni_Cliente, Nombre_Cliente,
 ("3", "78016273K", "Paula", "Galvez", "684192834", "conguitosrojos@gmail.com", "conguitosrojos", "conguitonegro"),
 ("4", "47098301N", "Ben", "Rodriguez", "691823013", "talkingben@gmail.com", "talkingben", "cristian921213"),
 ("5", "47973199X", "Daniel", "Agra", "938172831", "danielagra@gmail.com", "danielagra", "brais1"),
-("6","93182193Z", "Anna", "Garcia", "594112999", "guaumiau@gmail.com", "friedrich", "engels");';
+("6","93182193Z", "Anna", "Garcia", "594112999", "guaumiau@gmail.com", "friedrich", "engels"),
+("7","3748984H", "admin", "admin", "928586878", "admin@gmail.com", "admin", "admin");';
 
 if (mysqli_query($conn, $insert_clientes)) {
   echo "Insert clientes correcto<br>";
@@ -133,7 +141,8 @@ if (mysqli_query($conn, $insert_empleados)) {
 $insert_tarifas='INSERT INTO tarifas (id_Tarifa, Nombre_Tarifa, Descripcion_Tarifa,
  Precio_Tarifa) VALUES
 ("1", "Tarifa Base", "Tarifa base con los servicios mínimos", "150€"),
-("2", "Instalación solar", "Estudio de posibilidades de instalación y pusta en marcha", "2000€")';
+("2", "Instalación solar", "Estudio de posibilidades de instalación, estimación de presupesto y puesta en marcha", "4000€"),
+("3", "Persianas y cortinas automáticas", "Instalación de persianas y cortinas automatizadas en toda la vivienda", "1300€");';
 
 if (mysqli_query($conn, $insert_tarifas)) {
   echo "Insert tarifas correcto<br>";
