@@ -24,7 +24,7 @@
             while($row = mysqli_fetch_assoc($sql))
             {
                 echo "<div class='col-12 col-md-6 col-xxl-4'>";
-                echo "<div class='m-3 p-3 shadow bg-white'>";
+                echo "<div class='panel m-3 p-3 shadow bg-white'>";
                 echo "<b>" . $row["Nombre_Tarifa"] . "</b>";
                 echo "<p>" . $row["Descripcion_Tarifa"] . "</p>";
                 echo "<p>" . $row["Precio_Tarifa"] . "</p>";
