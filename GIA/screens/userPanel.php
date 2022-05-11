@@ -7,60 +7,38 @@
         <title>User Panel</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/main.css">
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     </head>
     <body>
+        <div class="content-full">
         <h3>PRODUCTOS</h3>
+        <div class="row">
+        <!-- TABLA DINAMICA DE PRODUCTOS-->
         <?php
         $host = "localhost";
         $user = "root";
         $password = "";
-        $db = "proyectogia";
+        $db = "proyectogia_db";
         if($connection = mysqli_connect($host, $user, $password, $db)){
-            
+            $sql = mysqli_query( $connection, "SELECT * FROM tarifas");
+            while($row = mysqli_fetch_assoc($sql))
+            {
+                echo "<div class='col-12 col-md-6 col-xxl-4'>";
+                echo "<div class='m-3 p-3 shadow bg-white'>";
+                echo "<b>" . $row["Nombre_Tarifa"] . "</b>";
+                echo "<p>" . $row["Descripcion_Tarifa"] . "</p>";
+                echo "<p>" . $row["Precio_Tarifa"] . "</p>";
+                echo "</div>";
+                echo "</div>";
+            }
         }
-        
-
-        $sql = mysql_query("SELECT * FROM tarifas");
-        echo "<table>";
-        while($row = mysql_fetch_assoc($sql))
-        {
-            
+        else{
+            die("No se ha podido conectar con la base de datos: " . mysqli_connection_error());
         }
-        echo "</table";
+        mysqli_close($connection);
         ?>
-        <div class="row">
-            <div class="col-12 col-md-6 col-xxl-4">
-                <div class="m-3 p-3 shadow bg-white">
-                    1
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-4">
-                <div class="m-3 p-3 shadow bg-white">
-                    2
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-4">
-                <div class="m-3 p-3 shadow bg-white">
-                    3
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-4">
-                <div class="m-3 p-3 shadow bg-white">
-                    4
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-4">
-                <div class="m-3 p-3 shadow bg-white">
-                    5
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xxl-4">
-                <div class="m-3 p-3 shadow bg-white">
-                    6
-                </div>
-            </div>
         </div>
-        <?php ?>
+        </div>
         <script src="../js/bootstrap.js"></script>
         <script src="../js/userPanel.js"></script>
     </body>

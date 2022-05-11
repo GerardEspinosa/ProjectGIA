@@ -105,14 +105,7 @@ $insert_clientes='INSERT INTO clientes (id_Cliente, dni_Cliente, Nombre_Cliente,
  Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Nombre_Usuario_Cliente, Contraseña_Cliente) VALUES
 ("1", "123456", "Gerard", "Espinosa", "431425", "gerard@gmail.com", "", "12345"),
 ("2", "1293891Q", "Usuario", "Prueba", "701704653", "correo@gmail.com", "", ""),
-("23", "34819481Q","Gerard", "Espinosa", "294308", "gerarde@gmail.com", "", ""),
-("1234", "839193Q", "Gerard", "Espinosa", "0", "", "", ""),
-("1235", "", "", "", "0", "", "", ""),
-("1236", "47197735X", "Ivan", "Montoya", "666444555", "ivan@gmail.com", "", ""),
-("12345", "9123891Q", "Gerard", "Espinosa", "605701038", "geymix@gmail.com", "", ""),
-("1231534", "2319418Q", "Prueba", "1", "239892391", "prueba231@gmail.com", "", ""),
-("1231535", "12345678Q", "Marcos", "Antonio", "2147483647", "prueba@prueba.com", "", ""),
-("1231536", "12314511", "Prueba", "Prueba", "3841741", "Prueba@prueba.com", "", "");';
+("3", "98367863Y", "admin", "admin", "701704653", "admin@gmail.com", "admin", "admin")';
 
 
 if (mysqli_query($conn, $insert_clientes)) {
