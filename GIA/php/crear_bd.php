@@ -13,6 +13,13 @@ if ($conn->connect_error) {
 }
 
 // Create database
+
+$sql = "DROP DATABASE IF EXISTS proyectogia_db";
+if ($conn->query($sql) === TRUE) {
+  echo "Database dropped successfully<br>";
+} else {
+  echo "Error dropping database: " . $conn->error."<br>"; 
+}
 $sql = "CREATE DATABASE IF NOT EXISTS proyectogia_db";
 if ($conn->query($sql) === TRUE) {
   echo "Database created successfully<br>";
