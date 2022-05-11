@@ -101,24 +101,33 @@ $conn = mysqli_connect($servername, $username, $password,$database);
   echo "Error creating table: " . mysqli_error($conn)."<br>";
  }
 
+
+
 $insert_clientes='INSERT INTO clientes (id_Cliente, dni_Cliente, Nombre_Cliente,
  Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Nombre_Usuario_Cliente, Contraseña_Cliente) VALUES
-("1", "123456", "Gerard", "Espinosa", "431425", "gerard@gmail.com", "", "12345"),
-("2", "1293891Q", "Usuario", "Prueba", "701704653", "correo@gmail.com", "", ""),
-("23", "34819481Q","Gerard", "Espinosa", "294308", "gerarde@gmail.com", "", ""),
-("1234", "839193Q", "Gerard", "Espinosa", "0", "", "", ""),
-("1235", "", "", "", "0", "", "", ""),
-("1236", "47197735X", "Ivan", "Montoya", "666444555", "ivan@gmail.com", "", ""),
-("12345", "9123891Q", "Gerard", "Espinosa", "605701038", "geymix@gmail.com", "", ""),
-("1231534", "2319418Q", "Prueba", "1", "239892391", "prueba231@gmail.com", "", ""),
-("1231535", "12345678Q", "Marcos", "Antonio", "2147483647", "prueba@prueba.com", "", ""),
-("1231536", "12314511", "Prueba", "Prueba", "3841741", "Prueba@prueba.com", "", "");';
-
+("1", "78016273K", "Monica", "Sanchez", "931029384", "monicasanchez@gmail.com", "kuka999", "guisante31"),
+("2", "97182918W", "Carlos", "Lopez", "691029384", "carloslopez@gmail.com", "cocos231", "guisante31213"),
+("3", "78016273K", "Paula", "Galvez", "684192834", "conguitosrojos@gmail.com", "conguitosrojos", "conguitonegro"),
+("4", "47098301N", "Ben", "Rodriguez", "691823013", "talkingben@gmail.com", "talkingben", "cristian921213"),
+("5", "47973199X", "Daniel", "Agra", "938172831", "danielagra@gmail.com", "danielagra", "brais1"),
+("6","93182193Z", "Anna", "Garcia", "594112999", "guaumiau@gmail.com", "friedrich", "engels");';
 
 if (mysqli_query($conn, $insert_clientes)) {
   echo "Insert clientes correcto<br>";
   } else {
   echo "Error Insert clientes: " . mysqli_error($conn)."<br>";
+};
+
+$insert_empleados='INSERT INTO empleado (id_Empleado,dni_Empleado,Nombre_Empleado,Apellidos_Empleado,
+Cargo_Empleado,Sueldo_Empleado,Fecha_Nacimiento_Empleado,Correo_Empleado,Usuario_Empleado,
+Constraseña_Empleado) VALUES
+("1","47197735X","Ivan","Montoya Garcia","Admin","5000€","28/10/2000","ivanmontoya.79@gmai.com","ivanmoga","1234");
+';
+
+if (mysqli_query($conn, $insert_empleados)) {
+  echo "Insert empleados correcto<br>";
+  } else {
+  echo "Error Insert empleados: " . mysqli_error($conn)."<br>";
 };
 
 $insert_tarifas='INSERT INTO tarifas (id_Tarifa, Nombre_Tarifa, Descripcion_Tarifa,
