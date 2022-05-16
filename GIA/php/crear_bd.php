@@ -130,7 +130,9 @@ if (mysqli_query($conn, $insert_clientes)) {
 $insert_empleados='INSERT INTO empleado (id_Empleado,dni_Empleado,Nombre_Empleado,Apellidos_Empleado,
 Cargo_Empleado,Sueldo_Empleado,Fecha_Nacimiento_Empleado,Correo_Empleado,Usuario_Empleado,
 Constraseña_Empleado) VALUES
-("1","47197735X","Ivan","Montoya Garcia","Admin","5000€","28/10/2000","ivanmontoya.79@gmai.com","ivanmoga","1234");
+("1","","Gerard","Espinosa Yxart","Admin","5000€","08/01/2000","gerard.espinosa.yxart@gmai.com","geymix","1234"),
+("2","","Adria","Rivero Segarra","Admin","5000€","","adriariverosegarra@gmai.com","thisiszeshak","1234"),
+("3","47197735X","Ivan","Montoya Garcia","Admin","5000€","28/10/2000","ivanmontoya.79@gmai.com","ivanmoga","1234");
 ';
 
 if (mysqli_query($conn, $insert_empleados)) {
@@ -145,8 +147,8 @@ $insert_tarifas='INSERT INTO tarifas (id_Tarifa, Nombre_Tarifa, Descripcion_Tari
 ("2", "Paneles Solares", "Estudio de posibilidades de instalación, estimación de presupesto y puesta en marcha.", "4000€", "panelSolar.jpg"),
 ("3", "Persianas y cortinas automáticas", "Instalación de persianas y cortinas automatizadas en toda la vivienda.", "1300€", "persiana.jpg"),
 ("4", "Automatizacion de las puertas","Las habitaciones cuentan con sensores, cuando detecta que vas a entrar o salir de una habitación, abre o cierra la puerta.","1300€","puerta.png"),
-("5", "Automatización de las luces","Contarás con sensores en los marcos de las puertas que detectan cuando alguien entra, en ese momento enciende la luz. Si detecta que la habitación está vacia, se cierran.","1300€","bombilla.jpg");
-("6", "Pack automatización","Los servicios 3, 4 y 5 de automatización en un pack, con un descuento del 30%.","6720€","automatizacion.jpg")';
+("5", "Automatización de las luces","Contarás con sensores en los marcos de las puertas que detectan cuando alguien entra, en ese momento enciende la luz. Si detecta que la habitación está vacia, se cierran.","1300€","bombilla.jpg"),
+("6", "Pack automatización","Los servicios 3, 4 y 5 de automatización en un pack, con un descuento del 30%.", "6720€", "automatizacion.jpg");';
 
 if (mysqli_query($conn, $insert_tarifas)) {
   echo "Insert tarifas correcto<br>";
