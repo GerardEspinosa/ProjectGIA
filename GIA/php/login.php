@@ -24,7 +24,7 @@
             $result2 = mysqli_query($connection, $query2);
             if(mysqli_num_rows($result)==1 || mysqli_num_rows($result2)==1)
             {
-                header("LOCATION: ../index.html");
+                header("LOCATION: ../index.php");
             }
             else
             {
@@ -46,7 +46,7 @@
                         }
                     }
                     else{
-                        header("LOCATION: ../index.html");
+                        header("LOCATION: ../index.php");
                     }
                 }
                 else{
