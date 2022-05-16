@@ -141,9 +141,12 @@ if (mysqli_query($conn, $insert_empleados)) {
 
 $insert_tarifas='INSERT INTO tarifas (id_Tarifa, Nombre_Tarifa, Descripcion_Tarifa,
  Precio_Tarifa, Path_Tarifa) VALUES
-("1", "Tarifa Base", "Tarifa base con los servicios mínimos", "150€", "atencionCliente.jpg"),
-("2", "Paneles Solares", "Estudio de posibilidades de instalación, estimación de presupesto y puesta en marcha", "4000€", "panelSolar.jpg"),
-("3", "Persianas y cortinas automáticas", "Instalación de persianas y cortinas automatizadas en toda la vivienda", "1300€", "persiana.jpg");';
+("1", "Tarifa Base", "Tarifa base con los servicios mínimos, incluye una alarma 24 horas y atención al cliente las 24 horas.", "150€", "atencionCliente.jpg"),
+("2", "Paneles Solares", "Estudio de posibilidades de instalación, estimación de presupesto y puesta en marcha.", "4000€", "panelSolar.jpg"),
+("3", "Persianas y cortinas automáticas", "Instalación de persianas y cortinas automatizadas en toda la vivienda.", "1300€", "persiana.jpg"),
+("4", "Automatizacion de las puertas","Las habitaciones cuentan con sensores, cuando detecta que vas a entrar o salir de una habitación, abre o cierra la puerta.","1300€","puerta.png"),
+("5", "Automatización de las luces","Contarás con sensores en los marcos de las puertas que detectan cuando alguien entra, en ese momento enciende la luz. Si detecta que la habitación está vacia, se cierran.","1300€","bombilla.jpg");
+("6", "Pack automatización","Los servicios 3, 4 y 5 de automatización en un pack, con un descuento del 30%.","6720€","automatizacion.jpg")';
 
 if (mysqli_query($conn, $insert_tarifas)) {
   echo "Insert tarifas correcto<br>";
