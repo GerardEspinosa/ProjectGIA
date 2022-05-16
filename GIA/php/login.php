@@ -16,7 +16,7 @@
         else
         {
 
-            
+
             echo "Conectado con exito" . "<br>";
             $query = "SELECT * FROM `clientes` WHERE Nombre_Usuario_Cliente = $user AND Contraseña_Cliente = $pwd";
             $query2 = "SELECT * FROM `clientes` WHERE Correo_Cliente = $user AND Contraseña_Cliente = $pwd";

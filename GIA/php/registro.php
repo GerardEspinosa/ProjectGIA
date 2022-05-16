@@ -37,7 +37,7 @@
         //echo ($query);
         if($result = mysqli_query($connection, $query))
         {
-            header("LOCATION: ../index.html");
+            header("LOCATION: ../index.php");
         }
     }
 
