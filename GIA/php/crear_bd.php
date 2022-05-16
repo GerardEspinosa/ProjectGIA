@@ -96,7 +96,7 @@ $conn = mysqli_connect($servername, $username, $password,$database);
     }
 
   $tarifas_clientes='CREATE TABLE tarifas_clientes (
-    id_Tarifas_Clientes int(11) NOT NULL PRIMARY KEY,
+    id_Tarifas_Clientes int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_Tarifa int(11) NOT NULL,
     id_Cliente int(11) NOT NULL,
     FOREIGN KEY (id_Tarifa) REFERENCES tarifas(id_Tarifa),
