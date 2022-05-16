@@ -26,8 +26,9 @@
                 echo "<div class='col-12 col-md-6 col-xxl-4'>";
                 echo "<div class='panel m-3 p-3 shadow bg-white'>";
                 echo "<b>" . $row["Nombre_Tarifa"] . "</b>";
+                echo "<img width='300' height='auto' src='../img/" . $row["Path_Tarifa"] . "'>";
                 echo "<p>" . $row["Descripcion_Tarifa"] . "</p>";
-                echo "<p>" . $row["Precio_Tarifa"] . "</p>";
+                echo "<p>" . $row["Precio_Tarifa"] . "€</p>";
                 echo "</div>";
                 echo "</div>";
             }

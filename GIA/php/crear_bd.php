@@ -84,7 +84,8 @@ $conn = mysqli_connect($servername, $username, $password,$database);
     id_Tarifa int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre_Tarifa varchar(50) COLLATE latin1_spanish_ci NOT NULL,
     Descripcion_Tarifa varchar(200) COLLATE latin1_spanish_ci NOT NULL,
-    Precio_Tarifa decimal(10,0) NOT NULL
+    Precio_Tarifa decimal(10,0) NOT NULL,
+    Path_Tarifa varchar(50) COLLATE latin1_spanish_ci NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COLLATE=utf8mb4_spanish_ci;';
     
     
@@ -139,10 +140,10 @@ if (mysqli_query($conn, $insert_empleados)) {
 };
 
 $insert_tarifas='INSERT INTO tarifas (id_Tarifa, Nombre_Tarifa, Descripcion_Tarifa,
- Precio_Tarifa) VALUES
-("1", "Tarifa Base", "Tarifa base con los servicios mínimos", "150€"),
-("2", "Instalación solar", "Estudio de posibilidades de instalación, estimación de presupesto y puesta en marcha", "4000€"),
-("3", "Persianas y cortinas automáticas", "Instalación de persianas y cortinas automatizadas en toda la vivienda", "1300€");';
+ Precio_Tarifa, Path_Tarifa) VALUES
+("1", "Tarifa Base", "Tarifa base con los servicios mínimos", "150€", "atencionCliente.jpg"),
+("2", "Paneles Solares", "Estudio de posibilidades de instalación, estimación de presupesto y puesta en marcha", "4000€", "panelSolar.jpg"),
+("3", "Persianas y cortinas automáticas", "Instalación de persianas y cortinas automatizadas en toda la vivienda", "1300€", "persiana.jpg");';
 
 if (mysqli_query($conn, $insert_tarifas)) {
   echo "Insert tarifas correcto<br>";
