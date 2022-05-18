@@ -25,10 +25,17 @@
             {
                 echo "<div class='col-12 col-md-6 col-xxl-4'>";
                 echo "<div class='panel m-3 p-3 shadow bg-white'>";
-                echo "<b>" . $row["Nombre_Tarifa"] . "</b>";
+                echo "<h5>" . $row["Nombre_Tarifa"] . "</h5>";
+                echo "<div class='mb-3'>";
                 echo "<img width='300' height='auto' src='../img/" . $row["Path_Tarifa"] . "'>";
+                echo "</div>";
                 echo "<p>" . $row["Descripcion_Tarifa"] . "</p>";
                 echo "<p>" . $row["Precio_Tarifa"] . "€</p>";
+                echo "<form action='../php/comprarProducto.php'  method='post'>";
+                echo "<input type='hidden' name='user_loged' id='user_loged'>";
+                echo "<input type='hidden' name='tarifa' value='" . $row["id_Tarifa"] . "'>";
+                echo "<button class='btn btn-primary rounded-30'>Comprar</button>";
+                echo "</form>";
                 echo "</div>";
                 echo "</div>";
             }
