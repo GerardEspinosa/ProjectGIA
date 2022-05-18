@@ -12,6 +12,9 @@ if (localStorage.checkbox && localStorage.checkbox !== "") {
 }
 
 function lsRememberMe() {
+    localStorage.username = user.value;
+    localStorage.checkbox = rmCheck.value;
+    /*
     // Si el check está marcado y el usuario no está vacio guardamos los valores en el localStorage
     if (rmCheck.checked && user.value !== "") {
         localStorage.username = user.value;
@@ -22,5 +25,6 @@ function lsRememberMe() {
         localStorage.username = "";
         localStorage.checkbox = "";
     }
+    */
 }
 
