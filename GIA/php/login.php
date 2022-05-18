@@ -35,7 +35,7 @@
                 if(mysqli_num_rows($result)==1 || mysqli_num_rows($result2)==1)
                 {
                     $row = mysqli_fetch_assoc($result);
-                    $row = mysqli_fetch_assoc($result2);
+                    $row2 = mysqli_fetch_assoc($result2);
                     if ($row["Cambiar_Contraseña"] == TRUE || $row2["CambiarContraseña"] == TRUE){
                         $id = $row["id_Empleado"];
                         $empleadoUsuario = "'" . $row["Usuario_Empleado"] . "'";
