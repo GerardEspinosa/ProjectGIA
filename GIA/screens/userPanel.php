@@ -7,6 +7,7 @@
         <title>User Panel</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/sweetalert2.min.css">
         <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     </head>
     <body>
@@ -32,9 +33,9 @@
                 echo "<p>" . $row["Descripcion_Tarifa"] . "</p>";
                 echo "<p>" . $row["Precio_Tarifa"] . "€</p>";
                 echo "<form action='../php/comprarProducto.php'  method='post'>";
-                echo "<input type='hidden' name='user_loged' id='user_loged'>";
+                echo "<input type='hidden' name='user_loged' class='user_loged'>";
                 echo "<input type='hidden' name='tarifa' value='" . $row["id_Tarifa"] . "'>";
-                echo "<button class='btn btn-primary rounded-30'>Comprar</button>";
+                echo "<input type='submit' class='btn btn-primary rounded-30' value='Comprar'>";
                 echo "</form>";
                 echo "</div>";
                 echo "</div>";

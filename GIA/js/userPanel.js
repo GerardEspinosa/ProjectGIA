@@ -1,4 +1,7 @@
 if (localStorage.checkbox && localStorage.checkbox !== "") {
     var nombre = localStorage.username;
-    document.getElementById("user_loged").value = nombre;
+    var users = document.getElementsByClassName("user_loged");
+    for(var i = 0; i < users.length; i++){
+        users[i].value = nombre;
+    }
 }
