@@ -18,5 +18,5 @@ else{
     die("No se ha podido conectar con la base de datos: " . mysqli_connection_error());
 }
 mysqli_close($connection);
-header("LOCATION: ../screens/userPanel.php");
+header("LOCATION: ../screens/alert.html");
 ?>
