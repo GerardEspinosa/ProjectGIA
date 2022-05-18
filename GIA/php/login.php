@@ -24,7 +24,15 @@
             $result2 = mysqli_query($connection, $query2);
             if(mysqli_num_rows($result)==1 || mysqli_num_rows($result2)==1)
             {
-                header("LOCATION: ../index.php");
+                $row = mysqli_fetch_assoc($result);
+                $nickDeUsuario = $row["Nombre_Usuario_Cliente"];
+                $nombreDeUsuario = $row["Nombre_Cliente"];
+                $apellido = $row["Apellido_Cliente"];
+                $tel = $row["Telefono_Cliente"];
+                $mail = $row["Correo_Cliente"];
+                header("LOCATION: ../index.php?t1=".$nickDeUsuario."&t2=".$nombreDeUsuario."&t3=".$apellido."&t4=".$tel."&t5=".$mail);
+                //header ($header);
+                //header('LOCATION: ../index.php?t1='.$t1.'&t2='.$t2.'&t3='.$t3.'&t4='.$t4.'&t5='.$t5);
             }
             else
             {

@@ -16,7 +16,6 @@
       crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   </head>
-
   <body class="bg-lightgrey">
     <div class="offcanvas offcanvas-start" id="demo">
       <div class="offcanvas-header">
@@ -35,8 +34,19 @@
       data-bs-toggle="offcanvas"
       data-bs-target="#demo">
     </button>
+    <div id="hiddenDiv" hidden>
+      <form id="hiddenForm" method="get" hidden>
+        <input type="hidden" name="nickUser" id="nickUser">
+      </form>
+    </div>
     <div class="child text-center" id="pagina">
-      <h1>Bienvenido, </h1><h1 id="userName"></h1>
+      <h1>Bienvenido, </h1>
+      <h1>
+        <?php
+          $nickUser = $_GET["t1"];  
+          echo $nickUser;
+        ?>
+      </h1>
       <button class="btn btn-primary rounded-30" onclick="myFunction()">Ver
         datos personales</button>
     </div>
@@ -44,30 +54,52 @@
       <table class="table table-borderless">
         <tr>
           <td><b>Nombre de usuario</b></td>
-          <td>adria</td>
+          <td>
+            <?php
+              echo $nickUser;
+            ?>
+          </td>
         </tr>
         <tr>
           <td><b>Nombre</b></td>
-          <td>Adrià</td>
+          <td>
+            <?php
+              $nombreUser = $_GET["t2"];
+              echo $nombreUser;
+            ?>
+          </td>
         </tr>
         <tr>
           <td><b>Apellido</b></td>
-          <td>Rivero</td>
+          <td>            
+            <?php
+              $apellidoUser = $_GET["t3"];
+              echo $apellidoUser;
+            ?>
+            </td>
         </tr>
         <tr>
           <td><b>Email</b></td>
-          <td>adriariverosegarra@gmail.com</td>
+          <td>
+            <?php
+              $mailUser = $_GET["t5"];
+              echo $mailUser;
+            ?>
+          </td>
         </tr>
         <tr>
           <td><b>Teléfono</b></td>
-          <td>75920576</td>
+          <td>            
+            <?php
+              $telefonoUser = $_GET["t4"];
+              echo $telefonoUser;
+            ?>
+          </td>
         </tr>
       </table>
     </div>
-
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/index.js"></script>
   </body>
-
 </html>
