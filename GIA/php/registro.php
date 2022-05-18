@@ -35,6 +35,20 @@
         //$query = "INSERT INTO clientes(dni_Cliente, Nombre_Cliente, Apellido_Cliente, Telefono_Cliente, Correo_Cliente, Fecha_Nacimiento_Cliente) VALUES(?, ?, ?, ?, ?, ?)";
         $query = "INSERT INTO `clientes` ( `dni_Cliente`, `Nombre_Cliente`, `Apellido_Cliente`, `Telefono_Cliente`, `Correo_Cliente`, `Nombre_Usuario_Cliente`, `Contraseña_Cliente`) VALUES ( $dni, $nombre, $apellido, $telefono, $correo, $userName, $pwd)";
         //echo ($query);
+        /*
+        $result = mysqli_query($connection, $query);
+        if(mysqli_num_rows($result)==1){
+            if($row = mysqli_fetch_assoc($result))
+            {
+                $nickDeUsuario = $row["Nombre_Usuario_Cliente"];
+                $nombreDeUsuario = $row["Nombre_Cliente"];
+                $apellido = $row["Apellido_Cliente"];
+                $tel = $row["Telefono_Cliente"];
+                $mail = $row["Correo_Cliente"];
+                header("LOCATION: ../index.php?t1=".$nickDeUsuario."&t2=".$nombreDeUsuario."&t3=".$apellido."&t4=".$tel."&t5=".$mail);        
+            }
+        }
+        */
         if($result = mysqli_query($connection, $query))
         {
             header("LOCATION: ../index.php");
