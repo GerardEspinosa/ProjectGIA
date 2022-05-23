@@ -51,7 +51,12 @@
         */
         if($result = mysqli_query($connection, $query))
         {
-            header("LOCATION: ../index.php");
+            $nombreDeUsuario = $_POST["nombre"];
+            $apellidos = $_POST["apellido"];
+            $mail = $_POST["correo"];
+            $tel = $_POST["telefono"];
+            $nickDeUsuario = $_POST["nombre_usuario"];
+            header("LOCATION: ../index.php?t1=".$nickDeUsuario."&t2=".$nombreDeUsuario."&t3=".$apellidos."&t4=".$tel."&t5=".$mail);    
         }
     }
 
