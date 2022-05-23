@@ -9,10 +9,25 @@
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/sweetalert2.min.css">
         <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <script src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"></script>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <div class="content-full">
         <h3>PRODUCTOS</h3>
+        <?php
+        $nickUser = $_GET["t1"];
+        $nombreUser = $_GET["t2"];
+        $apellidoUser = $_GET["t3"];
+        $telefonoUser = $_GET["t4"];
+        $mailUser = $_GET["t5"];
+        ?>
+        <a class="btn btn-primary rounded-30" <?php $url = "href='../index.php?t1=" . $nickUser . "&t2=" . $nombreUser . "&t3=" . $apellidoUser  . "&t4=" . $telefonoUser  ."&t5=" . $mailUser . "'";  echo $url; ?>>Volver al Menú</a>
         <div class="row">
         <!-- TABLA DINAMICA DE PRODUCTOS-->
         <?php

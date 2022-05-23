@@ -23,7 +23,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
       </div>
       <div class="offcanvas-body">
-        <a class="no-underline" href="screens/userPanel.php">Panel de Usuario</a>
+        <?php
+        $nickUser = $_GET["t1"];
+        $nombreUser = $_GET["t2"];
+        $apellidoUser = $_GET["t3"];
+        $telefonoUser = $_GET["t4"];
+        $mailUser = $_GET["t5"];
+        ?>
+        <a class="no-underline" <?php $url = "href='screens/userPanel.php?t1=" . $nickUser . "&t2=" . $nombreUser . "&t3=" . $apellidoUser  . "&t4=" . $telefonoUser  ."&t5=" . $mailUser . "'";  echo $url; ?>>Panel de Usuario</a>
         <br>
         <button class="btn btn-secondary mt-3" onclick="location.href = 'default.html';">Logout</button>
       </div>
@@ -42,8 +49,7 @@
     <div class="child text-center" id="pagina">
       <h1>Bienvenido, </h1>
       <h1>
-        <?php
-          $nickUser = $_GET["t1"];  
+        <?php 
           echo $nickUser;
         ?>
       </h1>
@@ -64,7 +70,6 @@
           <td><b>Nombre</b></td>
           <td>
             <?php
-              $nombreUser = $_GET["t2"];
               echo $nombreUser;
             ?>
           </td>
@@ -73,7 +78,6 @@
           <td><b>Apellido</b></td>
           <td>            
             <?php
-              $apellidoUser = $_GET["t3"];
               echo $apellidoUser;
             ?>
             </td>
@@ -82,7 +86,6 @@
           <td><b>Email</b></td>
           <td>
             <?php
-              $mailUser = $_GET["t5"];
               echo $mailUser;
             ?>
           </td>
@@ -91,7 +94,6 @@
           <td><b>Teléfono</b></td>
           <td>            
             <?php
-              $telefonoUser = $_GET["t4"];
               echo $telefonoUser;
             ?>
           </td>
