@@ -9,8 +9,3 @@ function myFunction() {
 
 document.getElementById("personalData").style.display = "none";
 document.getElementById("personalData").style.position = "absolute";
-
-if (localStorage.checkbox && localStorage.checkbox !== "") {
-    var nombre = localStorage.username;
-    document.getElementById("userName").innerText = nombre;
-}
