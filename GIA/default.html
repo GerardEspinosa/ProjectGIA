@@ -46,10 +46,10 @@
                             <input id="user" type="text" class="form-control
                                 rounded-30 mt-3" placeholder="Nombre de Usuario"
                                 name="user"
-                                onchange="lsRememberMe()">
+                                onchange="lsRememberMe()" required>
                             <input id="password" type="password"
                                 class="form-control rounded-30 mt-3"
-                                placeholder="Contraseña" name="password">
+                                placeholder="Contraseña" name="password" required>
                         </div>
                         <div class="container push-40 mt-3">
                             <label for="checkRemember" class="child"><input
@@ -72,27 +72,27 @@
                     <form action="php/registro.php" method="post">
                         <input id="nombre" name="nombre" type="text"
                             class="form-control
-                            rounded-30 mt-3" placeholder="Nombre">
+                            rounded-30 mt-3" placeholder="Nombre" required>
                         <input id="apellido" name="apellido" type="text"
                             class="form-control
-                            rounded-30 mt-3" placeholder="Apellido">
+                            rounded-30 mt-3" placeholder="Apellido" required>
                         <input id="correo" name="correo" type="email"
                             class="form-control
                             rounded-30 mt-3" placeholder="E-mail">
-                        <input id="dni" name="dni" type="email"
+                        <input id="dni" name="dni" type="text"
                             class="form-control
-                            rounded-30 mt-3" placeholder="DNI">
+                            rounded-30 mt-3" placeholder="DNI" maxlength="9" required>
                         <input id="nombre_usuario" name="nombre_usuario"
                             type="text"
                             class="form-control
-                            rounded-30 mt-3" placeholder="Nombre de Usuario">
+                            rounded-30 mt-3" placeholder="Nombre de Usuario" required>
                         <input id="contraseña_cliente" name="contraseña_cliente"
                             type="password"
                             class="form-control
-                            rounded-30 mt-3" placeholder="Contraseña">
+                            rounded-30 mt-3" placeholder="Contraseña" required>
                         <input id="telefono" name="telefono" type="number"
                             class="form-control
-                            rounded-30 mt-3" placeholder="Teléfono">
+                            rounded-30 mt-3" placeholder="Teléfono" maxlength="999999999" required>
                         <div class="container mt-5">
                             <button type="submit" class="btn btn-primary
                                 child rounded-30">Registrarse</button>
