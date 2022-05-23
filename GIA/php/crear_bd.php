@@ -65,6 +65,7 @@ $conn = mysqli_connect($servername, $username, $password,$database);
       dni_Empleado varchar(9) NOT NULL,
       Nombre_Empleado varchar(20)  NOT NULL,
       Apellidos_Empleado varchar(30)  NOT NULL,
+      Telefono_Empleado int(9) NOT NULL,
       Cargo_Empleado enum("Admin","SuperAdmin","Jefe")  NOT NULL,
       Sueldo_Empleado decimal(10,0) NOT NULL,
       Fecha_Nacimiento_Empleado date NOT NULL,
@@ -127,7 +128,7 @@ if (mysqli_query($conn, $insert_clientes)) {
   echo "Error Insert clientes: " . mysqli_error($conn)."<br>";
 };
 
-$insert_empleados='INSERT INTO empleado (id_Empleado,dni_Empleado,Nombre_Empleado,Apellidos_Empleado,
+$insert_empleados='INSERT INTO empleado (id_Empleado,dni_Empleado,Nombre_Empleado,Apellidos_Empleado,Telefono_Empleado,
 Cargo_Empleado,Sueldo_Empleado,Fecha_Nacimiento_Empleado,Correo_Empleado,Usuario_Empleado,
 Constraseña_Empleado) VALUES
 ("1","95252648F","Gerard","Espinosa Yxart","Admin","5000€","08/01/2000","gerard.espinosa.yxart@gmai.com","geymix","1234"),
