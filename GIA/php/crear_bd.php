@@ -131,9 +131,9 @@ if (mysqli_query($conn, $insert_clientes)) {
 $insert_empleados='INSERT INTO empleado (id_Empleado,dni_Empleado,Nombre_Empleado,Apellidos_Empleado,Telefono_Empleado,
 Cargo_Empleado,Sueldo_Empleado,Fecha_Nacimiento_Empleado,Correo_Empleado,Usuario_Empleado,
 Constraseña_Empleado) VALUES
-("1","","Gerard","Espinosa Yxart","605701038","Admin","5000€","08/01/2000","gerard.espinosa.yxart@gmai.com","geymix","1234"),
-("2","","Adria","Rivero Segarra","607893893","Admin","5000€","","adriariverosegarra@gmai.com","thisiszeshak","1234"),
-("3","47197735X","Ivan","Montoya Garcia","673914812","Admin","5000€","28/10/2000","ivanmontoya.79@gmai.com","ivanmoga","1234");
+("1","95252648F","Gerard","Espinosa Yxart","Admin","5000€","08/01/2000","gerard.espinosa.yxart@gmai.com","geymix","1234"),
+("2","37390347Y","Adria","Rivero Segarra","Admin","5000€","","adriariverosegarra@gmai.com","thisiszeshak","1234"),
+("3","47197735X","Ivan","Montoya Garcia","Admin","5000€","28/10/2000","ivanmontoya.79@gmai.com","ivanmoga","1234");
 ';
 
 if (mysqli_query($conn, $insert_empleados)) {

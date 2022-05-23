@@ -1,5 +1,5 @@
 Swal.fire({
-    title: '!Enhorabuena!',
+    title: '¡Enhorabuena!',
     text: 'Servicio contratado con exito',
     icon: 'success',
     confirmButtonText: 'Ok',
