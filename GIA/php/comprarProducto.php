@@ -18,5 +18,12 @@ else{
     die("No se ha podido conectar con la base de datos: " . mysqli_connection_error());
 }
 mysqli_close($connection);
-header("LOCATION: ../screens/alert.html");
+
+$nickUser = $_GET["t1"];
+$nombreUser = $_GET["t2"];
+$apellidoUser = $_GET["t3"];
+$telefonoUser = $_GET["t4"];
+$mailUser = $_GET["t5"];
+
+header("LOCATION: ../screens/alert.php?t1=".$nickUser."&t2=".$nombreUser."&t3=".$apellidoUser."&t4=".$telefonoUser."&t5=".$mailUser);    
 ?>

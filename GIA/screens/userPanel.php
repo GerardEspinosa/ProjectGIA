@@ -47,7 +47,8 @@
                 echo "</div>";
                 echo "<p>" . $row["Descripcion_Tarifa"] . "</p>";
                 echo "<p>" . $row["Precio_Tarifa"] . "€</p>";
-                echo "<form action='../php/comprarProducto.php'  method='post'>";
+                echo "<form action='../php/comprarProducto.php?t1=".$nickUser."&t2=".$nombreUser."&t3=".$apellidoUser."&t4=".$telefonoUser."&t5=".$mailUser."'"."method='post'>";
+                echo "<form action='../php/comprarProducto.php method='post'>";
                 echo "<input type='hidden' name='user_loged' class='user_loged'>";
                 echo "<input type='hidden' name='tarifa' value='" . $row["id_Tarifa"] . "'>";
                 echo "<input type='submit' class='btn btn-primary rounded-30' value='Comprar'>";
