@@ -9,3 +9,4 @@ function myFunction() {
 
 document.getElementById("personalData").style.display = "none";
 document.getElementById("personalData").style.position = "absolute";
+
